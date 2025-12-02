@@ -6,7 +6,7 @@ app = Flask(__name__)
 CORS(app)
 
 INVENTARIO_FILE = "inventarios_recibidos.json"
-JSON_AGENCIA = r"C:\Users\infob\Desktop\inventarios\agencias\pachuca\inventario_render.json"
+JSON_AGENCIA = r"C:\Users\infob\Desktop\pachuca\inventario_render.json"
 
 def cargar_inventario():
     if not os.path.exists(INVENTARIO_FILE):
@@ -50,5 +50,8 @@ def actualizar_desde_matriz():
     guardar_inventario(inventario_final)
     return jsonify({"status": "actualizado"})
 
+import os
+
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5003)
+    puerto = int(os.environ.get("PORT", 5004))  # usa el PORT de Render o 5004 por defecto
+    app.run(host="0.0.0.0", port=puerto)
