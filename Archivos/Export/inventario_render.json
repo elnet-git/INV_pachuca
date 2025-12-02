@@ -4,5 +4,11 @@
         "descripcion":"wefwe",
         "stock":5,
         "agencia":"mixquiahuala"
+    },
+    {
+        "codigo":"ds",
+        "descripcion":"sd",
+        "stock":54,
+        "agencia":"mixquiahuala"
     }
 ]
