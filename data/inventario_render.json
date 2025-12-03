@@ -10,5 +10,11 @@
         "descripcion":"sd",
         "stock":54,
         "agencia":"PACHUCA"
+    },
+    {
+        "codigo":"HJ,H",
+        "descripcion":"J,",
+        "stock":54,
+        "agencia":"PACHUCA"
     }
 ]
