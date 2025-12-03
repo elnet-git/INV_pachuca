@@ -196,7 +196,7 @@ def generar_json_desde_excel():
                 if c not in df.columns:
                     df[c] = ""
             df = df[columnas]
-            df["agencia"] = "mixquiahuala"
+            df["agencia"] = "pachuca"
             ARCHIVO_JSON.parent.mkdir(parents=True, exist_ok=True)
             df.to_json(ARCHIVO_JSON, orient="records", indent=4, force_ascii=False)
             print(f"[{datetime.now()}] ✅ JSON generado: {ARCHIVO_JSON}")
@@ -1222,7 +1222,7 @@ class AppUnificada(tk.Tk):
 #                    SERVIDOR FLASK (API REST)  
 # ==========================================================================
 def iniciar_flask():
-    app_flask.run(host="0.0.0.0", port=5002, debug=False)
+    app_flask.run(host="0.0.0.0", port=5003, debug=False)
 
 # ===============================  
 # EJECUCIÓN PRINCIPAL  
